@@ -3,10 +3,12 @@ let computerPlay = function (weapon) {
   return weapon[Math.floor(Math.random() * weapon.length)];
 };
 
+// create function where user can input their weapon
 let playerSelection = function (userInput) {
   return userInput;
 };
 
+// create gameRound function that showing the winner every turn
 function gameRound(a, b) {
   let message;
   let player = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
@@ -33,6 +35,7 @@ function gameRound(a, b) {
   return message;
 }
 
+// create for loop in order to repeat the game 5 round in total
 for (let round = 1; round <= 5; round++) {
   let playerInput = playerSelection(prompt("Choose your weapon: "));
   let computerInput = computerPlay(["Rock", "Paper", "Scissors"]);
