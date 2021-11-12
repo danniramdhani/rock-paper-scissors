@@ -37,7 +37,7 @@ button {
 button:active {
   background-color: #ba3b46;
   color: #fff;
-  transform: scale(0.95, 0.95);
+  transform: scale(0.98, 0.98);
 }
 
 button:hover {
@@ -114,6 +114,6 @@ div#winner {
     font-size: 3.5em;
   }
   button:active {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.95, 0.95);
   }
 }
