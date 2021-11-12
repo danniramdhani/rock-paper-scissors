@@ -3,19 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/7151b50e46.js"
+            crossorigin="anonymous"
+        ></script>
         <title>Rock, Paper, Scissors</title>
     </head>
     <body>
-        <div id="buttons">
-            <button class="btn" value="Rock">Rock</button>
-            <button class="btn" value="Paper">Paper</button>
-            <button class="btn" value="Scissors">Scissors</button>
+        <div class="header">
+            <header>
+                <div class="title"><h1>RPS The Game</h1></div>
+
+                <div class="message">
+                    <div id="winner">Score</div>
+                    <div class="score-board">
+                        <div class="player">
+                            <p id="player-score">Player: 0</p>
+                            <p class="player-message"></p>
+                        </div>
+                        <div class="com">
+                            <p id="computer-score">Computer: 0</p>
+                            <p class="computer-message"></p>
+                        </div>
+                    </div>
+                    <div class="round">
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <button class="btn far fa-hand-rock" value="Rock"></button>
+                    <button
+                        class="btn far fa-hand-paper"
+                        value="Paper"
+                    ></button>
+                    <button
+                        class="btn far fa-hand-scissors"
+                        value="Scissors"
+                    ></button>
+                </div>
+                <script src="script.js"></script>
+            </header>
         </div>
-        <div class="score-board">
-            <p id="winner"></p>
-            <p id="player-score">Player = 0</p>
-            <p id="computer-score">Computer = 0</p>
-        </div>
-        <script src="script.js"></script>
     </body>
 </html>
