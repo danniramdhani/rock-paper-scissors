@@ -67,14 +67,13 @@ div#winner {
   display: flex;
   width: 55%;
   justify-content: space-between;
-  margin: 2em 0;
+  margin-bottom: 2em;
 }
 
 .player,
 .com {
   display: flex;
   width: 100%;
-  height: 30vh;
   flex-direction: column;
   align-items: center;
 }
@@ -90,4 +89,19 @@ div#winner {
   display: flex;
   gap: 1em;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  #winner {
+    font-size: 1.4em;
+  }
+  .score-board {
+    font-size: 1em;
+  }
+  button {
+    font-size: 3em;
+  }
 }
