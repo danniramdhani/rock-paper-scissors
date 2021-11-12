@@ -83,6 +83,15 @@ function winnerCheck() {
     }
 }
 
+let reset = document.querySelector(".restart");
+
+function restart() {
+    reset.addEventListener("click", () => {
+        window.location.reload();
+    });
+    reset.style.display = 'block';
+}
+
 // Select all the buttons with the class "btn"
 const buttons = document.querySelectorAll(".btn");
 
@@ -95,9 +104,6 @@ buttons.forEach((btn) => {
         const value = e.target.attributes[1].value;
         // jalankan game
         gameRound(playerSelection(value), computerPlay(weapon));
-        console.log(playerSelection(value));
-        console.log(computerPlay(weapon));
-
         // winnerCheck() berfungsi untuk mengubah value isPlayerWin dan isComputerWin dari false
         // menjadi true apabila player atau computer telah mencapai score 5.
         winnerCheck();
@@ -116,8 +122,10 @@ buttons.forEach((btn) => {
         // menang
         if (isPlayerWin === true) {
             document.getElementById("winner").innerText = "Player win!";
+            restart();
         } else if (isComputerWin === true) {
             document.getElementById("winner").innerText = "Computer win!";
+            restart();
         }
     });
 });
